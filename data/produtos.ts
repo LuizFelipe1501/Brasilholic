@@ -33,7 +33,7 @@ export const produtos: Produto[] = [
 ]
 
 // WhatsApp
-export const WHATSAPP_NUMBER = '5538999090477'
+export const WHATSAPP_NUMBER = '553899090477'
 
 export function getWhatsappLink(nomeProduto?: string): string {
   const mensagem = nomeProduto

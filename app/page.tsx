@@ -32,7 +32,7 @@ export default function Home() {
           {/* Logo */}
           <a href="/" className="flex items-center gap-3 shrink-0">
             <Image
-              src="/logo.png"
+              src="/logo.jpeg"
               alt="Brasilholic"
               width={120}
               height={40}
@@ -382,7 +382,7 @@ export default function Home() {
         <div className="max-w-[1500px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="flex items-center gap-4">
             <Image
-              src="/logo.png"
+              src="/logo.jpeg"
               alt="Brasilholic"
               width={120}
               height={40}
