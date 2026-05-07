@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-script: 'Dancing Script', cursive;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --cream: #FAF6EE;
+  --cream-deep: #F2EBD9;
+  --verde: #1B5E2C;
+  --verde-soft: #2E7D3F;
+  --gold: #D4A017;
+  --gold-light: #E8C158;
+  --azul: #3A4F8C;
+  --whatsapp: #25D366;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  background: var(--cream);
+  color: var(--verde);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold-light);
+  color: var(--verde);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tipografia */
+.font-display {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.font-display-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 600;
+}
+
+/* Marquee infinito (mantido do site anterior) */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee {
+  animation: marquee 35s linear infinite;
+}
+
+/* Fade-in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Card hover */
+.shirt-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.shirt-card:hover .shirt-img {
+  transform: scale(1.05);
+}
+.shirt-card:hover .shirt-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+.shirt-card:hover .shirt-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+.shirt-img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.shirt-info {
+  transform: translateY(15px);
+  opacity: 0.95;
+  transition: all 0.4s ease;
+}
+.shirt-cta {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.4s ease 0.1s;
+}
+
+/* Pulse "disponível" */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-whatsapp:hover {
+  background: #1ebe5a;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* Botão dourado */
+.btn-gold {
+  background: var(--gold);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: var(--verde);
+  transform: translateY(-1px);
+}
+
+/* Decorative ornament — sparkle */
+.sparkle {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 0.7em;
+  vertical-align: super;
+  animation: pulse-dot 3s ease-in-out infinite;
+}
+
+/* Detail border ornamental */
+.ornament-border {
+  position: relative;
+}
+.ornament-border::before,
+.ornament-border::after {
+  content: '✦';
+  position: absolute;
+  color: var(--gold);
+  font-size: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ornament-border::before { left: -1.5rem; }
+.ornament-border::after { right: -1.5rem; }
+
+/* Grain sutil pra dar textura papel */
+.paper-grain {
+  position: relative;
+}
+.paper-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* Floating heart */
+@keyframes float-heart {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+.float-heart {
+  animation: float-heart 4s ease-in-out infinite;
+}
