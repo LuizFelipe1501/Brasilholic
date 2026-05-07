@@ -32,7 +32,7 @@ export default function Home() {
           {/* Logo */}
           <a href="/" className="flex items-center gap-3 shrink-0">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="Brasilholic"
               width={120}
               height={40}
@@ -74,19 +74,18 @@ export default function Home() {
             </div>
 
             <h1 className="font-display text-[14vw] sm:text-[10vw] lg:text-[7.5vw] xl:text-[7rem] leading-[0.95] text-verde">
-              <span className="block">Vista o</span>
               <span className="block">
                 <span className="font-display-italic text-gold">Brasil</span>
                 <span className="sparkle ml-2">✦</span>
               </span>
-              <span className="font-script text-gold text-[60%] block mt-2">
-                com charme.
+              <span className="font-script text-gold text-[55%] block mt-2">
+                mas make it cool.
               </span>
             </h1>
 
             <p className="mt-8 lg:mt-10 text-base md:text-lg text-verde/75 max-w-md leading-relaxed">
-              Peças femininas que celebram a brasilidade com elegância. Verde-amarelo numa
-              estética <em className="font-display-italic text-gold">it girl</em>, leve e desejável.
+              <span className="font-display-italic text-gold">Copa Core</span> by Brasilholic:
+              para garotas que vivem a brasilidade com orgulho! 💚💛
             </p>
 
             <div className="mt-8 lg:mt-10 flex flex-col sm:flex-row gap-3">
@@ -128,7 +127,7 @@ export default function Home() {
               {/* Imagem */}
               <div className="relative w-full h-full overflow-hidden rounded-sm bg-cream-deep">
                 <Image
-                  src="/modelo/regata-verde.jpeg"
+                  src="/modelo/cropped-amarela.jpeg"
                   alt="Modelo Brasilholic"
                   fill
                   priority
@@ -151,7 +150,7 @@ export default function Home() {
                 { text: '✦', sparkle: true },
                 { text: 'Verde Amarela', script: false },
                 { text: '✦', sparkle: true },
-                { text: 'It girl energy', script: true },
+                { text: 'Copa Core energy', script: true },
                 { text: '✦', sparkle: true },
                 { text: 'Made with love', script: false },
                 { text: '✦', sparkle: true },
@@ -279,7 +278,7 @@ export default function Home() {
               <div className="absolute inset-0 border border-gold/40 -translate-x-3 -translate-y-3" />
               <div className="relative w-full h-full overflow-hidden bg-cream">
                 <Image
-                  src="/modelo/cropped-amarela.jpeg"
+                  src="/modelo/regata-verde.jpeg"
                   alt="Brasilholic vibe"
                   fill
                   className="object-cover"
@@ -316,7 +315,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-3 gap-4 max-w-md">
               {[
                 { num: '100%', label: 'Brasileiro' },
-                { num: '✦', label: 'It girl' },
+                { num: '✦', label: 'Copa Core' },
                 { num: '♡', label: 'Made with love' },
               ].map((pilar, i) => (
                 <div key={i} className="text-center border-l border-gold/30 first:border-l-0 px-2">
@@ -345,10 +344,10 @@ export default function Home() {
             atendimento direto
           </p>
 
-          <h2 className="font-display text-5xl md:text-7xl text-verde leading-tight mb-6">
-            Bora deixar a
+          <h2 className="font-display text-4xl md:text-6xl text-verde leading-tight mb-6">
+            Quer garantir seu look
             <br />
-            <span className="font-script text-gold text-[1.2em]">amarelinha</span> sua?
+            com a <span className="font-script text-gold text-[1.2em]">BrasilHolic</span>?
           </h2>
 
           <p className="text-base md:text-lg text-verde/75 max-w-lg mx-auto mb-10 leading-relaxed">
@@ -363,7 +362,7 @@ export default function Home() {
             className="btn-whatsapp inline-flex items-center gap-3 px-9 md:px-11 py-4 md:py-5 text-sm md:text-base font-medium tracking-[0.15em] uppercase rounded-full"
           >
             <WhatsappIcon className="w-5 h-5 md:w-6 md:h-6" />
-            Falar no WhatsApp
+            Chame no WhatsApp
           </a>
 
           <p className="font-display-italic text-base text-verde/60 mt-6">
@@ -383,7 +382,7 @@ export default function Home() {
         <div className="max-w-[1500px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="flex items-center gap-4">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="Brasilholic"
               width={120}
               height={40}

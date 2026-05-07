@@ -9,13 +9,13 @@ export const produtos: Produto[] = [
   {
     id: 1,
     nome: 'Regata Verde Brasil',
-    descricao: 'Cropped canelado com detalhes em amarelo',
+    descricao: 'Blusa canelada com detalhes em amarelo',
     image_url: '/modelo/regata-verde.jpeg',
   },
   {
     id: 2,
     nome: 'Cropped Amarelinha',
-    descricao: 'A clássica reinventada — moderna e it girl',
+    descricao: 'Cropped amarelo — a clássica reinventada',
     image_url: '/modelo/cropped-amarela.jpeg',
   },
   {
@@ -33,7 +33,7 @@ export const produtos: Produto[] = [
 ]
 
 // WhatsApp
-export const WHATSAPP_NUMBER = '5538990904777'
+export const WHATSAPP_NUMBER = '553899090477'
 
 export function getWhatsappLink(nomeProduto?: string): string {
   const mensagem = nomeProduto
